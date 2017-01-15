@@ -1,4 +1,4 @@
-package com.chefmic.leetcode;
+package com.chefmic.leetcode.tree;
 
 import com.chefmic.leetcode.ds.TreeNode;
 

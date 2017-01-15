@@ -1,4 +1,4 @@
-package com.chefmic.leetcode;
+package com.chefmic.leetcode.array;
 
 import java.util.Arrays;
 

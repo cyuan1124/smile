@@ -1,4 +1,4 @@
-package com.chefmic.leetcode;
+package com.chefmic.leetcode.list;
 
 import com.chefmic.leetcode.ds.ListNode;
 
