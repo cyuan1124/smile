@@ -1,5 +1,7 @@
 package com.chefmic.elements.bst;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeSet;
 
 /**
@@ -22,6 +24,15 @@ public class TreeSetTreeMap {
         System.out.println(set.tailSet(4, false));
         System.out.println(set.higher(4));
         System.out.println(set.lower(4));
+
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        Integer[] array = new Integer[list.size()];
+        list.toArray(array);
     }
 
 }
