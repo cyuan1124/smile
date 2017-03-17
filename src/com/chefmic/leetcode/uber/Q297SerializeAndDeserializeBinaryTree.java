@@ -10,7 +10,7 @@ import java.util.LinkedList;
  * Created by cyuan on 2/2/17.
  */
 public class Q297SerializeAndDeserializeBinaryTree {
-    private static final String spliter = ",";
+    private static final String splitter = ",";
     private static final String NN = "X";
 
     // Encodes a tree to a single string.
@@ -22,9 +22,9 @@ public class Q297SerializeAndDeserializeBinaryTree {
 
     private void buildString(TreeNode node, StringBuilder sb) {
         if (node == null) {
-            sb.append(NN).append(spliter);
+            sb.append(NN).append(splitter);
         } else {
-            sb.append(node.val).append(spliter);
+            sb.append(node.val).append(splitter);
             buildString(node.left, sb);
             buildString(node.right, sb);
         }
@@ -33,7 +33,7 @@ public class Q297SerializeAndDeserializeBinaryTree {
     // Decodes your encoded data to tree.
     public TreeNode deserialize(String data) {
         Deque<String> nodes = new LinkedList<>();
-        nodes.addAll(Arrays.asList(data.split(spliter)));
+        nodes.addAll(Arrays.asList(data.split(splitter)));
         return buildTree(nodes);
     }
 

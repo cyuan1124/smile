@@ -1,0 +1,279 @@
+02-24 08:27:49.338 23554-23554/? I/Dash.Drives: Update 1487941738426
+02-24 08:27:50.198 23554-23554/? I/Dash.Drives: Update 1487941738426
+02-24 08:27:58.587 23601-23601/? I/Dash.DeviceService.BLE: Failed to connect to [CellAssistGen5]
+02-24 08:28:03.315 23601-23654/? I/Dash.DeviceService.BLE: Closing BLE GATT connection
+02-24 08:28:03.323 23601-23636/? I/Dash.DeviceService.Scan: Task finished
+02-24 08:28:03.336 23601-23636/? I/Dash.DeviceService.BT: Connecting to bluetooth device OBDLink LX
+02-24 08:28:03.348 23601-23636/? I/Dash.DeviceService.Scan: Run task bluetooth - OBDLink LX
+02-24 08:28:03.444 23601-23654/? I/Dash.Bluetooth: Attempting connection [ CHANNEL_2 ] with prior success rate of 0.00 on OBDLink LX @ 00:04:3E:30:91:6F
+02-24 08:28:08.612 23601-23654/? I/Dash.Bluetooth: Closing Bluetooth connection
+02-24 08:28:08.689 23601-23654/? I/Dash.DeviceService.BT: Failed to connect to OBDLink LX @ 00:04:3E:30:91:6F
+02-24 08:28:08.692 23601-23654/? I/Dash.DeviceService.BT: Could not connect to OBDLink LX @ 00:04:3E:30:91:6F [ bonded ]: Could not connect to bluetooth device
+02-24 08:28:08.692 23601-23654/? I/Dash.Bluetooth: Closing Bluetooth connection
+02-24 08:28:08.693 23601-23654/? I/Dash.DeviceService.BT: Calling disconnect from bluetooth connector
+02-24 08:28:08.693 23601-23654/? I/Dash.Bluetooth: Closing Bluetooth connection
+02-24 08:28:08.694 23601-23636/? I/Dash.DeviceService.Scan: Task finished
+02-24 08:28:08.694 23601-23636/? I/Dash.DeviceService.Scan: Start scanning bluetooth devices
+02-24 08:28:08.697 23601-23636/? I/Dash.DeviceService.Scan: Run task Scan Bluetooth Devices
+02-24 08:28:08.877 23601-23601/? I/Dash.DeviceService.BLE: Connection attempted, waiting for callback. false
+02-24 08:28:09.189 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 46:3E:A6:83:36:F8
+02-24 08:28:09.917 23601-23613/? I/Dash.DeviceService.BLE: DeviceConnected to GATT server.
+02-24 08:28:09.929 23601-23613/? I/Dash.DeviceService.BLE: Attempting to start service discovery - true
+02-24 08:28:09.966 23601-23613/? I/Dash.DeviceService.BLE: Writing known address as [ 88:33:14:DF:66:AB ]
+02-24 08:28:10.046 23601-23613/? E/Dash.SensorProvider: Sensor [android.sensor.ambient_temperature] unavailable
+02-24 08:28:10.050 23601-23613/? E/Dash.SensorProvider: Sensor [android.sensor.relative_humidity] unavailable
+02-24 08:28:10.126 23601-23613/? I/Dash.BLE: servicesDiscovered [ 5 services ]
+02-24 08:28:10.127 23601-23613/? I/Dash.BLE: Inspecting service [ 00001800-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:10.128 23601-23613/? I/Dash.BLE: Inspecting service [ 00001801-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:10.128 23601-23613/? I/Dash.BLE: Inspecting service [ 0000180a-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:10.128 23601-23613/? I/Dash.BLE: Inspecting service [ f000ffc0-0451-4000-b000-000000000000 ]
+02-24 08:28:10.128 23601-23613/? I/Dash.BLE: Inspecting service [ f000ca99-0451-4000-b000-000000000000 ]
+02-24 08:28:10.129 23601-23613/? I/Dash.BLE: Found 'Write' characteristic [ f0000001-0451-4000-b000-000000000000 ]
+02-24 08:28:10.129 23601-23613/? I/Dash.BLE: Found 'Notify' characteristic [ f0000002-0451-4000-b000-000000000000 ]
+02-24 08:28:10.131 23601-23613/? I/Dash.BLE: Enabled notifications for characteristic [ f0000002-0451-4000-b000-000000000000 ], getting descriptors
+02-24 08:28:10.131 23601-23613/? I/Dash.BLE: Processing descriptor [ 00002902-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:10.132 23601-23613/? I/Dash.BLE: Processing descriptor [ 00002901-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:10.132 23601-23613/? I/Dash.BLE: Found 'Read' characteristic [ f0000002-0451-4000-b000-000000000000 ]
+02-24 08:28:10.236 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 75:A2:9C:FC:27:88
+02-24 08:28:10.284 23601-23612/? I/Dash.DeviceService.BLE: Service discovery completed
+02-24 08:28:10.284 23601-23612/? I/Dash.DeviceService.BLE: Completed discovery of services/characteristics/descriptors, initializing OBD connection
+02-24 08:28:10.284 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 0E:6D:DB:CE:37:20
+02-24 08:28:10.290 23601-23612/? I/Dash.DeviceService: Disconnect from Movement recognition
+02-24 08:28:10.333 23601-23652/? I/Dash.DeviceConnector: Calling start on obd-service.
+02-24 08:28:11.615 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 14:99:E2:29:0D:07
+02-24 08:28:11.662 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 4B:C4:CE:F4:45:B8
+02-24 08:28:12.675 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null 76:8E:ED:2D:E4:28
+02-24 08:28:12.733 23601-23652/? I/Dash.CellAssist Gen5: Found 2 voltage triggers
+02-24 08:28:13.741 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device null C8:29:2A:10:2F:5B
+02-24 08:28:14.259 23601-23652/? I/Dash.CellAssist Gen5: Processed 1000 voltage readings
+02-24 08:28:14.476 23601-23652/? I/Dash.CellAssist Gen5: Found 15 OCV readings
+                                                          ].
+02-24 08:28:14.637 23601-23652/? I/Dash.CellAssist Gen5: Processed 15 OCV readings
+                                                           1 5 : Engine Coolant Temperature
+                                                           1 1 : Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)
+                                                           1 d : Vehicle speed.
+                                                           1 c : Engine RPM
+                                                           1 1c : OBD standards this vehicle conforms to.
+                                                           1 7 : Long term fuel % trim - Bank 1.
+                                                           1 6 : Short term fuel % trim - Bank 1.
+                                                           1 4 : Calculated LOAD Value
+                                                           1 3 : Fuel system status
+                                                           1 10 : MAF air flow rate.
+                                                           1 f : Intake air temperature
+                                                           1 14 : Bank 1, Sensor 1: Oxygen sensor voltage, Short term fuel trim.
+                                                           1 13 : Oxygen sensors present.
+                                                           1 20 : Codes supported [ 0x21 - 0x40 ]
+                                                           1 1f : Run time since engine start.
+                                                          ].
+02-24 08:28:16.434 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 00 - Codes supported [ 0x00 - 0x20 ]
+                                                           1 21 : Distance traveled with malfunction indicator lamp (MIL) on.
+                                                           1 2f : Fuel Level
+                                                           1 33 : Barometric pressure.
+                                                           1 40 : Codes supported [ 0x41 - 0x60 ]
+                                                          ].
+02-24 08:28:16.626 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 20 - Codes supported [ 0x21 - 0x40 ]
+                                                           1 46 : Ambient air temperature.
+                                                           1 42 : Control module voltage.
+                                                          ].
+02-24 08:28:16.797 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 40 - Codes supported [ 0x41 - 0x60 ]
+                                                           9 6 : Calibration Verification Numbers
+                                                           9 4 : Calibration ID
+                                                           9 2 : Vehicle identification number (VIN).
+                                                          ].
+02-24 08:28:17.006 23601-23652/? W/Dash.Service: No count-down-ring found for code 09 00 - Codes supported [ 0x01 - 0x20 ].
+02-24 08:28:17.007 23601-23652/? E/Dash.OBDException: 0x09 0x0A
+02-24 08:28:17.096 23601-23601/? I/Dash.DeviceService.Scan: Find a BT device CS iMac C8:E0:EB:5C:DD:EA
+02-24 08:28:17.217 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 1c - OBD standards this vehicle conforms to.
+02-24 08:28:17.432 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 13 - Oxygen sensors present.
+02-24 08:28:17.632 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 21 - Distance traveled with malfunction indicator lamp (MIL) on.
+02-24 08:28:17.651 23601-23652/? I/Dash.Service: Skipping non-polling command 'Calibration Verification Numbers' [ based on advice from PollingStrategy ].
+02-24 08:28:17.663 23601-23652/? I/Dash.Service: Skipping non-polling command 'Calibration ID' [ based on advice from PollingStrategy ].
+02-24 08:28:17.942 23601-23652/? W/Dash.Service: No count-down-ring found for code 09 02 - Vehicle identification number (VIN).
+02-24 08:28:17.943 23601-23652/? W/Dash.Service: No count-down-ring found for reading VerboseVehicleDataReading
+02-24 08:28:17.945 23601-23652/? W/Dash.Service: No count-down-ring found for reading MileageReading
+02-24 08:28:20.457 23554-23554/? I/Dash.DriveLoader: 13 items deleted
+                                                         Malfunction Indicator Lamp Status: false ].
+02-24 08:28:20.799 23554-23554/? I/Dash.DriveLoader: 0 items deleted
+02-24 08:28:21.698 23554-23554/? I/Dash.Drives: Update 1487941738426
+                                                         Fuel system 2 status [ Open loop due to insufficient engine temperature ] ].
+02-24 08:28:22.765 23554-23554/? I/Dash.Drives: Update 1487941738426
+02-24 08:28:23.605 23601-23652/? I/Dash.DeviceService: Uploading FuelEfficiency 0.0
+02-24 08:28:23.718 23601-23636/? I/Dash.DeviceService.Scan: Task finished
+02-24 08:28:23.718 23601-23636/? I/Dash.DeviceService.BLE: Start ble scan
+02-24 08:28:23.721 23601-23636/? I/Dash.DeviceService.Scan: Run task Scan BLE devices
+                                                           1 5 : Engine Coolant Temperature
+                                                           1 1 : Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)
+                                                           1 d : Vehicle speed.
+                                                           1 c : Engine RPM
+                                                           1 1c : OBD standards this vehicle conforms to.
+                                                           1 7 : Long term fuel % trim - Bank 1.
+                                                           1 6 : Short term fuel % trim - Bank 1.
+                                                           1 4 : Calculated LOAD Value
+                                                           1 3 : Fuel system status
+                                                           1 10 : MAF air flow rate.
+                                                           1 f : Intake air temperature
+                                                           1 14 : Bank 1, Sensor 1: Oxygen sensor voltage, Short term fuel trim.
+                                                           1 13 : Oxygen sensors present.
+                                                           1 20 : Codes supported [ 0x21 - 0x40 ]
+                                                           1 1f : Run time since engine start.
+                                                          ].
+02-24 08:28:23.883 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 00 - Codes supported [ 0x00 - 0x20 ]
+02-24 08:28:23.887 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 14:99:E2:29:0D:07
+02-24 08:28:23.890 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 47:61:A5:71:18:7E
+02-24 08:28:23.895 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 78:BD:BC:3C:2E:C2
+02-24 08:28:23.899 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 0E:6D:DB:CE:37:20
+02-24 08:28:23.903 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null C8:69:CD:26:5F:56
+02-24 08:28:23.925 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null B0:34:95:36:41:6E
+02-24 08:28:23.993 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 14:99:E2:29:0D:07
+02-24 08:28:24.013 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 4B:C4:CE:F4:45:B8
+02-24 08:28:24.019 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 78:BD:BC:3C:2E:C2
+02-24 08:28:24.025 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 75:A2:9C:FC:27:88
+02-24 08:28:24.031 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 76:8E:ED:2D:E4:28
+                                                           1 21 : Distance traveled with malfunction indicator lamp (MIL) on.
+                                                           1 2f : Fuel Level
+                                                           1 33 : Barometric pressure.
+                                                           1 40 : Codes supported [ 0x41 - 0x60 ]
+                                                          ].
+02-24 08:28:24.060 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 20 - Codes supported [ 0x21 - 0x40 ]
+02-24 08:28:24.075 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 0E:6D:DB:CE:37:20
+02-24 08:28:24.108 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null B0:34:95:36:41:6E
+02-24 08:28:24.174 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 14:99:E2:29:0D:07
+                                                           1 46 : Ambient air temperature.
+                                                           1 42 : Control module voltage.
+                                                          ].
+02-24 08:28:24.244 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 40 - Codes supported [ 0x41 - 0x60 ]
+02-24 08:28:24.249 23601-23652/? I/Dash.Service: Shifting priorities
+02-24 08:28:24.250 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 0E:6D:DB:CE:37:20
+02-24 08:28:24.290 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null B0:34:95:36:41:6E
+02-24 08:28:24.299 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 75:A2:9C:FC:27:88
+02-24 08:28:24.328 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null C0:67:7F:45:D3:A8
+02-24 08:28:24.356 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 14:99:E2:29:0D:07
+02-24 08:28:24.396 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 76:8E:ED:2D:E4:28
+02-24 08:28:24.427 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device null 0E:6D:DB:CE:37:20
+                                                         Malfunction Indicator Lamp Status: false ].
+02-24 08:28:24.967 23601-23601/? I/Dash.DeviceService.BLE: Find a BLE device CellAssistGen5 88:33:14:DF:66:AB
+02-24 08:28:24.973 23601-23601/? I/Dash.DeviceService.BLE: Stop scanning
+02-24 08:28:24.973 23601-23636/? I/Dash.DeviceService.Scan: Task finished
+02-24 08:28:24.976 23601-23636/? I/Dash.DeviceService.BLE: Connecting to ble device CellAssistGen5
+02-24 08:28:24.988 23601-23636/? I/Dash.DeviceService.Scan: Run task BLE - CellAssistGen5
+02-24 08:28:24.988 23601-23654/? I/Dash.DeviceService.BLE: Connecting to BLE device [CellAssistGen5]
+02-24 08:28:25.258 23601-23601/? I/Dash.DeviceService.BLE: Connection attempted, waiting for callback. false
+02-24 08:28:25.262 23601-23612/? I/Dash.DeviceService.BLE: DeviceConnected to GATT server.
+02-24 08:28:25.265 23601-23612/? I/Dash.DeviceService.BLE: Attempting to start service discovery - true
+02-24 08:28:25.308 23601-23612/? I/Dash.DeviceService.BLE: Writing known address as [ 88:33:14:DF:66:AB ]
+02-24 08:28:25.378 23601-23612/? E/Dash.SensorProvider: Sensor [android.sensor.ambient_temperature] unavailable
+02-24 08:28:25.380 23601-23612/? E/Dash.SensorProvider: Sensor [android.sensor.relative_humidity] unavailable
+02-24 08:28:25.536 23601-23612/? I/Dash.BLE: servicesDiscovered [ 5 services ]
+02-24 08:28:25.538 23601-23612/? I/Dash.BLE: Inspecting service [ 00001800-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:25.539 23601-23612/? I/Dash.BLE: Inspecting service [ 00001801-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:25.540 23601-23612/? I/Dash.BLE: Inspecting service [ 0000180a-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:25.541 23601-23612/? I/Dash.BLE: Inspecting service [ f000ffc0-0451-4000-b000-000000000000 ]
+02-24 08:28:25.543 23601-23612/? I/Dash.BLE: Inspecting service [ f000ca99-0451-4000-b000-000000000000 ]
+02-24 08:28:25.545 23601-23612/? I/Dash.BLE: Found 'Write' characteristic [ f0000001-0451-4000-b000-000000000000 ]
+02-24 08:28:25.549 23601-23612/? I/Dash.BLE: Found 'Notify' characteristic [ f0000002-0451-4000-b000-000000000000 ]
+02-24 08:28:25.554 23601-23612/? I/Dash.BLE: Enabled notifications for characteristic [ f0000002-0451-4000-b000-000000000000 ], getting descriptors
+02-24 08:28:25.555 23601-23612/? I/Dash.BLE: Processing descriptor [ 00002902-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:25.556 23601-23612/? I/Dash.BLE: Processing descriptor [ 00002901-0000-1000-8000-00805f9b34fb ]
+02-24 08:28:25.557 23601-23612/? I/Dash.BLE: Found 'Read' characteristic [ f0000002-0451-4000-b000-000000000000 ]
+02-24 08:28:25.630 23601-23613/? I/Dash.DeviceService.BLE: Service discovery completed
+02-24 08:28:25.630 23601-23613/? I/Dash.DeviceService.BLE: Completed discovery of services/characteristics/descriptors, initializing OBD connection
+02-24 08:28:25.642 23601-23636/? I/Dash.DeviceService.Scan: Task finished
+02-24 08:28:25.651 23601-23613/? I/Dash.DeviceService: Disconnect from Movement recognition
+02-24 08:28:25.735 23601-23613/? I/Dash.DeviceConnector: Calling stop on obd-service...
+02-24 08:28:25.735 23601-23613/? I/Dash.Service: Service is stopping..
+02-24 08:28:25.736 23601-23613/? I/Dash.DeviceService: Uploading FuelEfficiency 5.3324633
+02-24 08:28:25.888 23601-23613/? I/Dash.Service: Service is canceling task..
+02-24 08:28:25.888 23601-23613/? I/Dash.DeviceService: Stop called on OBD-service.
+02-24 08:28:25.897 23601-23652/? I/Dash.DeviceConnector: Calling start on obd-service.
+02-24 08:28:25.931 23601-23652/? I/Dash.CellAssist Gen5: Response to command [ Gen5ReadVoltageCommand ] was not accepted; was type [ UnexpectedResponse ] containing [ 41 1F 02 58 
+                                                         
+                                                          ].
+02-24 08:28:27.991 23601-23609/? E/PowerManager: WakeLock finalized while still held: Dash.DeviceService
+02-24 08:28:28.456 23601-23652/? I/Dash.CellAssist Gen5: Found 0 voltage triggers
+                                                           1 5 : Engine Coolant Temperature
+                                                           1 1 : Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)
+                                                           1 d : Vehicle speed.
+                                                           1 c : Engine RPM
+                                                           1 1c : OBD standards this vehicle conforms to.
+                                                           1 7 : Long term fuel % trim - Bank 1.
+                                                           1 6 : Short term fuel % trim - Bank 1.
+                                                           1 4 : Calculated LOAD Value
+                                                           1 3 : Fuel system status
+                                                           1 10 : MAF air flow rate.
+                                                           1 f : Intake air temperature
+                                                           1 14 : Bank 1, Sensor 1: Oxygen sensor voltage, Short term fuel trim.
+                                                           1 13 : Oxygen sensors present.
+                                                           1 20 : Codes supported [ 0x21 - 0x40 ]
+                                                           1 1f : Run time since engine start.
+                                                          ].
+02-24 08:28:29.958 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 00 - Codes supported [ 0x00 - 0x20 ]
+                                                           1 21 : Distance traveled with malfunction indicator lamp (MIL) on.
+                                                           1 2f : Fuel Level
+                                                           1 33 : Barometric pressure.
+                                                           1 40 : Codes supported [ 0x41 - 0x60 ]
+                                                          ].
+02-24 08:28:30.160 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 20 - Codes supported [ 0x21 - 0x40 ]
+                                                           1 46 : Ambient air temperature.
+                                                           1 42 : Control module voltage.
+                                                          ].
+02-24 08:28:30.349 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 40 - Codes supported [ 0x41 - 0x60 ]
+                                                           9 6 : Calibration Verification Numbers
+                                                           9 4 : Calibration ID
+                                                           9 2 : Vehicle identification number (VIN).
+                                                          ].
+02-24 08:28:30.529 23601-23652/? W/Dash.Service: No count-down-ring found for code 09 00 - Codes supported [ 0x01 - 0x20 ].
+02-24 08:28:30.530 23601-23652/? E/Dash.OBDException: 0x09 0x0A
+02-24 08:28:30.710 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 1c - OBD standards this vehicle conforms to.
+02-24 08:28:30.907 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 13 - Oxygen sensors present.
+02-24 08:28:31.087 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 21 - Distance traveled with malfunction indicator lamp (MIL) on.
+02-24 08:28:31.104 23601-23652/? I/Dash.Service: Skipping non-polling command 'Calibration Verification Numbers' [ based on advice from PollingStrategy ].
+02-24 08:28:31.121 23601-23652/? I/Dash.Service: Skipping non-polling command 'Calibration ID' [ based on advice from PollingStrategy ].
+02-24 08:28:31.336 23601-23652/? W/Dash.Service: No count-down-ring found for code 09 02 - Vehicle identification number (VIN).
+02-24 08:28:31.337 23601-23652/? W/Dash.Service: No count-down-ring found for reading MileageReading
+                                                         Malfunction Indicator Lamp Status: false ].
+                                                         Fuel system 2 status [ Open loop due to insufficient engine temperature ] ].
+02-24 08:28:35.714 23601-23652/? I/Dash.DeviceService: Uploading FuelEfficiency 0.0
+                                                           1 5 : Engine Coolant Temperature
+                                                           1 1 : Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)
+                                                           1 d : Vehicle speed.
+                                                           1 c : Engine RPM
+                                                           1 1c : OBD standards this vehicle conforms to.
+                                                           1 7 : Long term fuel % trim - Bank 1.
+                                                           1 6 : Short term fuel % trim - Bank 1.
+                                                           1 4 : Calculated LOAD Value
+                                                           1 3 : Fuel system status
+                                                           1 10 : MAF air flow rate.
+                                                           1 f : Intake air temperature
+                                                           1 14 : Bank 1, Sensor 1: Oxygen sensor voltage, Short term fuel trim.
+                                                           1 13 : Oxygen sensors present.
+                                                           1 20 : Codes supported [ 0x21 - 0x40 ]
+                                                           1 1f : Run time since engine start.
+                                                          ].
+02-24 08:28:35.956 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 00 - Codes supported [ 0x00 - 0x20 ]
+                                                           1 21 : Distance traveled with malfunction indicator lamp (MIL) on.
+                                                           1 2f : Fuel Level
+                                                           1 33 : Barometric pressure.
+                                                           1 40 : Codes supported [ 0x41 - 0x60 ]
+                                                          ].
+02-24 08:28:36.130 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 20 - Codes supported [ 0x21 - 0x40 ]
+                                                           1 46 : Ambient air temperature.
+                                                           1 42 : Control module voltage.
+                                                          ].
+02-24 08:28:36.279 23601-23652/? W/Dash.Service: No count-down-ring found for code 01 40 - Codes supported [ 0x41 - 0x60 ]
+02-24 08:29:05.808 23554-23554/? I/Dash.Drives: Update 1487942899883
+02-24 08:29:05.820 23601-23613/? I/Dash.DeviceService: Disconnect called
+                                                         Malfunction Indicator Lamp Status: false ].
+02-24 08:29:06.676 23601-23652/? I/Dash.DeviceService: Disconnect executing...
+02-24 08:29:06.676 23601-23652/? I/Dash.DeviceService: Canceling service
+02-24 08:29:06.677 23601-23652/? I/Dash.DeviceService.BLE: Closing BLE GATT connection
+02-24 08:29:06.681 23601-23652/? I/Dash.DeviceService.BLE: Calling disconnect from stop on BLE connector.
+02-24 08:29:06.682 23601-23652/? I/Dash.DeviceService: Disconnect called
+02-24 08:29:06.682 23601-23652/? I/Dash.DeviceConnector: Calling stop on obd-service...
+02-24 08:29:06.683 23601-23652/? I/Dash.Service: Service is stopping..
+02-24 08:29:06.685 23601-23652/? I/Dash.DeviceService: Uploading FuelEfficiency 5.3312435
+02-24 08:29:06.839 23554-23554/? I/Dash.Drives: Update 1487942899883
+02-24 08:29:07.054 23601-23652/? I/Dash.Service: Service is canceling task..
+02-24 08:29:07.054 23601-23652/? I/Dash.DeviceService: Stop called on OBD-service.
+02-24 08:29:07.089 23601-23652/? I/Dash.DeviceService: Cleanly finished disconnection
+02-24 08:29:07.093 23601-23652/? I/Dash.DeviceService: Location client disconnected
+02-24 08:29:07.098 23601-23601/? I/Dash.DeviceService: DeviceConnected Add movement recognition request

@@ -10,7 +10,7 @@ public class Q245ShortestWordDistanceIII {
 
     public static void main(String[] args) {
         Q245ShortestWordDistanceIII tester = new Q245ShortestWordDistanceIII();
-        System.out.print(tester.shortestWordDistance(new String[]{"abcdefg", "!@3asdsd", "sdjiqwen", "abcdefg", "ASdkmcq", "abcdefg", "asdgnjdhb", "ASdqwet2ewq"},
+        System.out.print(tester.shortestWordDistance(new String[]{"abcdefg", "!@3asdsd", "sdjiqwen", "ASdkmcq", "abcdefg", "asdgnjdhb", "ASdqwet2ewq"},
                 "abcdefg", "abcdefg"));
     }
 
@@ -23,7 +23,7 @@ public class Q245ShortestWordDistanceIII {
         }
 
         int p1 = 0, p2 = 0;
-        int min = words.length + 1;
+        int min = words.length;
         while (p1 < i1.size() && p2 < i2.size()) {
             if (i1.get(p1) == i2.get(p2)) {
                 p1++;
