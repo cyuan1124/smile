@@ -1,6 +1,10 @@
 package com.chefmic.linkedin;
 
 import com.chefmic.leetcode.ds.ListNode;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Merge two sorted linked lists and return it as a new list.
@@ -19,6 +23,15 @@ public class Q21MergeTwoSortedLists {
             l1.next = mergeTwoLists(l1.next, l2);
             return l1;
         }
+    }
+
+    @Test
+    public void test() {
+        int a = Integer.MAX_VALUE;
+        long b = Integer.MAX_VALUE;
+
+        assertTrue(a == b);
+        assertTrue(++a != ++b);
     }
 
 }

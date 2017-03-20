@@ -38,7 +38,7 @@ public class Q297SerializeAndDeserializeBinaryTree {
     }
 
     private TreeNode buildTree(Deque<String> nodes) {
-        String val = nodes.remove();
+        String val = nodes.poll();
         if (val.equals(NN)) return null;
         else {
             TreeNode node = new TreeNode(Integer.valueOf(val));
