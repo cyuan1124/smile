@@ -3,6 +3,7 @@ package com.chefmic.linkedin;
 import com.chefmic.leetcode.ds.TreeNode;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Created by cyuan on 3/17/17.
@@ -16,8 +17,8 @@ public class Q103BinaryTreeZigzagLevelOrderTraversal {
             queue.add(root);
         }
         int level = 0;
-        while (queue.isEmpty()) {
-            List<Integer> vals = new ArrayList<>(queue.size());
+        while (!queue.isEmpty()) {
+            List<Integer> vals = queue.stream().map(node -> node.val).collect(Collectors.toList());
             for (int i = 0; i < queue.size(); i++) {
                 TreeNode node = queue.poll();
                 vals.add(node.val);

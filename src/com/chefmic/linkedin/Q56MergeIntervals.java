@@ -31,11 +31,35 @@ public class Q56MergeIntervals {
         return stack;
     }
 
+    /**
+     * @param intervals, a collection of intervals
+     * @return: A new sorted interval list.
+     */
+    public List<Interval> merge2(List<Interval> intervals) {
+        // write your code here
+        intervals.sort(Comparator.comparingInt(i -> i.start));
+
+        int i = 1;
+        while ( i < intervals.size()) {
+            Interval prior = intervals.get(i - 1);
+            Interval cur = intervals.get(i);
+
+            if (cur.start <= prior.end) {
+                intervals.remove(i);
+                intervals.set(i - 1, new Interval(prior.start, Math.max(prior.end, cur.end)));
+            } else {
+                i++;
+            }
+        }
+
+        return intervals;
+    }
+
     @Test
     public void test() {
-        List<Interval> intervals = Arrays.asList(new Interval(1, 3), new Interval(2, 6),
-                new Interval(8, 10), new Interval(15, 18));
-        merge(intervals).forEach(i -> System.out.println("[" + i.start + " " + i.end + "]"));
+        List<Interval> intervals = new ArrayList<>(Arrays.asList(new Interval(1, 3), new Interval(2, 6),
+                new Interval(8, 10), new Interval(15, 18)));
+        merge2(intervals).forEach(i -> System.out.println("[" + i.start + " " + i.end + "]"));
     }
 
 }

@@ -1,46 +1,69 @@
 package com.chefmic.leetcode.hard;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import org.junit.Test;
+
+import java.util.*;
 
 public class LFUCache {
 
-    final int capacity;
-    final LinkedHashMap<Integer, Integer> cache;
-
-    public LFUCache(int capacity) {
-        this.capacity = capacity;
-        this.cache = new LinkedHashMap<>(capacity);
+    class Cache {
+        long datetime;
+        int key;
+        int value;
+        int operations;
     }
 
-    /**
-     * Get the value (will always be positive) of the key if the key exists in the cache, otherwise return -1.
-     */
+    private final int capacity;
+    private final PriorityQueue<Cache> heap;
+    private final Map<Integer, Cache> cache;
+    int datetime = 0;
+    // @param capacity, an integer
+    public LFUCache(int capacity) {
+        this.capacity = capacity;
+        this.heap = new PriorityQueue<>(new Comparator<Cache>() {
+            @Override
+            public int compare(Cache o1, Cache o2) {
+                return o1.operations == o2.operations ?
+                        Integer.compare(o1.operations, o2.operations)
+                        : Long.compare(o1.datetime, o2.datetime);
+            }
+        });
+        this.cache = new HashMap<>();
+    }
+
+    // @param key, an integer
+    // @param value, an integer
+    // @return nothing
+    public void put(int key, int value) {
+        if (capacity == 0) {
+            return;
+        }
+        if (cache.size() == capacity) {
+            Cache leastRecent = heap.poll();
+            cache.remove(leastRecent.key);
+        }
+
+        Cache c = cache.getOrDefault(key, new Cache());
+        heap.remove(c);
+        c.key = key;
+        c.value = value;
+        c.operations++;
+        c.datetime = datetime++;
+        heap.add(c);
+        cache.put(key, c);
+    }
+
     public int get(int key) {
         if (!cache.containsKey(key)) {
             return -1;
         }
-        int val = cache.get(key);
-        cache.remove(key);
-        cache.put(key, val);
-        return val;
-    }
 
-    /**
-     * Set or insert the value if the key is not already present.
-     */
-    public void put(int key, int value) {
-        if (capacity == 0) return;
-        if (cache.containsKey(key)) {
-            cache.remove(key);
-        }
-        cache.put(key, value);
-
-        if (cache.size() == capacity) {
-            Map.Entry<Integer, Integer> entry = cache.entrySet().iterator().next();
-            cache.remove(entry.getKey());
-        }
-
+        Cache c = cache.get(key);
+        heap.remove(c);
+        c.operations++;
+        c.datetime++;
+        heap.add(c);
+        return c.value;
     }
 
 }

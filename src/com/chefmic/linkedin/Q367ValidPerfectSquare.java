@@ -2,6 +2,10 @@ package com.chefmic.linkedin;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Deque;
+import java.util.List;
+
 import static junit.framework.TestCase.assertFalse;
 import static org.junit.Assert.assertTrue;
 
@@ -21,11 +25,28 @@ public class Q367ValidPerfectSquare {
 
     @Test
     public void test() {
-        assertTrue(isPerfectSquare(1));
-        assertFalse(isPerfectSquare(3));
-        assertTrue(isPerfectSquare(9));
-        assertTrue(isPerfectSquare(16));
-        assertTrue(isPerfectSquare(25));
+        assertTrue(isPerfectSquare2(9));
+        assertTrue(isPerfectSquare2(16));
+        assertTrue(isPerfectSquare2(25));
     }
 
+    public boolean isPerfectSquare2(int num) {
+        if (num < 1) {
+            return false;
+        }
+
+        int low = 1, high = num;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (num / mid == mid) {
+                return true;
+            } else if (num / mid < mid) {
+                high = mid - 1;
+            } else {
+                low = mid + 1;
+            }
+        }
+
+        return false;
+    }
 }

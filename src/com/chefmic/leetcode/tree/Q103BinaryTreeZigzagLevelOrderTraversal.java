@@ -44,5 +44,22 @@ public class Q103BinaryTreeZigzagLevelOrderTraversal {
         return res;
     }
 
+    private void traverse(TreeNode node, int level, ArrayList<ArrayList<Integer>> result) {
+        if (node == null) {
+            return;
+        }
+        if (level == result.size()) {
+            result.add(new ArrayList<>());
+        }
+
+        result.get(level).add(node.val);
+        if (node.left != null) {
+            traverse(node.left, level + 1, result);
+        }
+
+        if (node.right != null) {
+            traverse(node.right, level + 1, result);
+        }
+    }
 
 }

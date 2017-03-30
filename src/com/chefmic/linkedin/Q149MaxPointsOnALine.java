@@ -21,21 +21,47 @@ public class Q149MaxPointsOnALine {
      * b = p1y - a*p1x
      */
     public int maxPoints(Point[] points) {
-        if (points.length < 2) return points.length;
-        Map<Line, Integer> counter = new HashMap<>();
-        for (int i = 0; i < points.length; i++) {
-            for (int j = i + 1; j < points.length; j++) {
-                Point p1 = points[i];
-                Point p2 = points[j];
-                double slope = 1.0 * (p1.y - p2.y) / (p1.x - p2.x);
-                double intersection = p1.y - slope * p1.x;
 
-                Line line = new Line(slope, intersection);
+        String INFINITE = "infinite";
 
-                counter.put(line, counter.getOrDefault(line, 0) + 1);
+        if (points.length < 3) return points.length;
+
+        int max = 0;//用于返回的结果，即共线点的最大个数
+        Map<String, Integer> map = new HashMap<String, Integer>(); //保存同一个斜率的点的个数
+
+        for (int i = 0; i < points.length; i++) {//以每一个点为固定点
+            map.clear();
+            int duplicate = 1;//记录跟固定点重合的个数
+
+            for (int j = 0; j < points.length; j++) {//遍历其他点，求其与固定点之间的斜率
+                if (i == j) continue;//如果是自己，跳过
+                String slope = "";//斜率
+
+                if (points[i].x == points[j].x && points[i].y == points[j].y) {//如果跟固定点重合
+                    duplicate++;
+                    continue;
+                } else if (points[i].x == points[j].x) {//如果跟固定点在同一条竖线上，斜率设为最大值
+                    slope = INFINITE;
+                } else {//计算该点与固定点的斜率
+                    int diffX = points[i].x - points[j].x;
+                    int diffY = points[i].y - points[j].y;
+                    int gcd = gcd(Math.abs(diffX), Math.abs(diffY));
+                    slope = String.format("%c%d/%d", ((diffX < 0 && diffY > 0) || (diffX > 0 && diffX < 0)) ? '-' : ' ',
+                            diffY / gcd, diffX / gcd);
+                }
+                map.put(slope, map.containsKey(slope) ? map.get(slope) + 1 : 1);
+            }
+
+            //更新最优解
+            if (map.size() == 0) {//如果map为空
+                max = duplicate > max ? duplicate : max;
+            } else {
+                for (String key : map.keySet()) {
+                    max = Math.max((duplicate + map.get(key)), max);
+                }
             }
         }
-        return counter.values().stream().max(Integer::compareTo).orElse(1);
+        return max;
     }
 
     private int gcd(int a, int b) {
@@ -48,42 +74,9 @@ public class Q149MaxPointsOnALine {
         return a + b; // either one is 0, so return the non-zero value
     }
 
-
-    class Line {
-        double slope;
-        double intersectionX;
-
-        public Line(double slope, double intersectionX) {
-            this.slope = slope;
-            this.intersectionX = intersectionX;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            Line line = (Line) o;
-
-            if (Double.compare(line.slope, slope) != 0) return false;
-            return Double.compare(line.intersectionX, intersectionX) == 0;
-        }
-
-        @Override
-        public int hashCode() {
-            int result;
-            long temp;
-            temp = Double.doubleToLongBits(slope);
-            result = (int) (temp ^ (temp >>> 32));
-            temp = Double.doubleToLongBits(intersectionX);
-            result = 31 * result + (int) (temp ^ (temp >>> 32));
-            return result;
-        }
-    }
-
     @Test
     public void testGCD() {
-        System.out.print(gcd(3, 9));
+        System.out.print(gcd(-3, 9));
         System.out.print(gcd(27, 9));
     }
 
