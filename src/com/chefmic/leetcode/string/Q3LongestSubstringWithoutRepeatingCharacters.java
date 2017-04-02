@@ -5,7 +5,7 @@ import org.junit.Test;
 /**
  * Created by cyuan on 3/29/17.
  */
-public class Q33LongestSubstringWithoutRepeatingCharacters {
+public class Q3LongestSubstringWithoutRepeatingCharacters {
 
     public int lengthOfLongestSubstring(String s) {
         int n = s.length(), ans = 0;
