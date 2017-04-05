@@ -76,8 +76,8 @@ public class Q149MaxPointsOnALine {
 
     @Test
     public void testGCD() {
-        System.out.print(gcd(-3, 9));
-        System.out.print(gcd(27, 9));
+        System.out.println(gcd(-3, 9));
+        System.out.println(gcd(27, 9));
     }
 
 }

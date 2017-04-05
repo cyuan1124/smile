@@ -26,7 +26,6 @@ public class Q187RepeatedDNASequences {
         Map<Integer, Integer> set = new HashMap<>();
 
         int hash = convert(s.substring(0, 10), dict);
-        System.out.println(String.format("%16s", Integer.toBinaryString(hash)).replace(' ', '0'));
         set.put(hash, 1);
 
         for (int i = 10; i < s.length(); i++) {

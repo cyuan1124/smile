@@ -18,7 +18,7 @@ public class Q152MaximumProductSubarray {
         for (int i = 1; i < nums.length; i++) {
             maxhere = Math.max(Math.max(maxBefore * nums[i], minBefore * nums[i]), nums[i]);
             minhere = Math.min(Math.min(maxBefore * nums[i], minBefore * nums[i]), nums[i]);
-            maxProduct = Math.max(maxBefore, maxProduct);
+            maxProduct = Math.max(maxhere, maxProduct);
             maxBefore = maxhere;
             minBefore = minhere;
         }

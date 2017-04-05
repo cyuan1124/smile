@@ -3,6 +3,7 @@ package com.chefmic.linkedin;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.function.IntSupplier;
 
 /**
  * Created by cyuan on 3/18/17.
@@ -45,6 +46,7 @@ public class Q34SearchForARange {
     @Test
     public void test() {
         int[] array = new int[] {5, 7, 7, 8, 8, 10};
+        Arrays.stream(array).reduce((sum, length) -> sum + length / 12).getAsInt();
         int[] result = searchRange(array, 8);
         System.out.println(result[0] + " " + result[1]);
     }

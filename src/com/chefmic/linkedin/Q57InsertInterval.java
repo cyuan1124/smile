@@ -58,20 +58,38 @@ public class Q57InsertInterval {
         return -1;
     }
 
+    public List<Interval> insert2(List<Interval> intervals, Interval newInterval) {
+        List<Interval> result = new LinkedList<>();
+        int i = 0;
+        while (i < intervals.size() && intervals.get(i).end < newInterval.start) {
+            result.add(intervals.get(i++));
+        }
+
+        int start = newInterval.start, end = newInterval.end;
+        while (i < intervals.size() && intervals.get(i).start <= newInterval.end) {
+            start = Math.min(start, intervals.get(i).start);
+            end = Math.max(end, intervals.get(i).end);
+            i++;
+        }
+        result.add(new Interval(start, end));
+
+        while (i < intervals.size()) {
+            result.add(intervals.get(i++));
+        }
+
+        return result;
+    }
+
     @Test
     public void test() {
         /**
          * [1,2],[3,5],[6,7],[8,10],[12,16]
          */
         List<Interval> intervals = Arrays.asList(
-                new Interval(1, 2),
-                new Interval(3, 5),
-                new Interval(6, 7),
-                new Interval(8, 10),
-                new Interval(12, 16)
+                new Interval(1, 5)
         );
 
-        insert(new ArrayList<>(intervals), new Interval(-4, 1)).stream().forEach(interval -> {
+        insert2(new ArrayList<>(intervals), new Interval(2, 3)).stream().forEach(interval -> {
             System.out.println(interval.start + " - " + interval.end);
         });
     }
