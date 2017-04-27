@@ -3,6 +3,7 @@ package com.chefmic.linkedin;
 import org.junit.Test;
 
 import java.awt.*;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -53,13 +54,7 @@ public class Q149MaxPointsOnALine {
             }
 
             //更新最优解
-            if (map.size() == 0) {//如果map为空
-                max = duplicate > max ? duplicate : max;
-            } else {
-                for (String key : map.keySet()) {
-                    max = Math.max((duplicate + map.get(key)), max);
-                }
-            }
+            max = Math.max(map.values().stream().max(Integer::compareTo).orElse(0) + duplicate, max);
         }
         return max;
     }

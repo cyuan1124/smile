@@ -18,8 +18,9 @@ public class Q103BinaryTreeZigzagLevelOrderTraversal {
         }
         int level = 0;
         while (!queue.isEmpty()) {
-            List<Integer> vals = queue.stream().map(node -> node.val).collect(Collectors.toList());
-            for (int i = 0; i < queue.size(); i++) {
+            List<Integer> vals = new ArrayList<>();
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
                 vals.add(node.val);
                 if (node.left != null) {

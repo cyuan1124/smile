@@ -33,8 +33,6 @@ public class Q187RepeatedDNASequences {
             hash += dict[s.charAt(i) - 'A'];
             hash &= flag;
 
-            System.out.println(String.format("%16s", Integer.toBinaryString(hash)).replace(' ', '0'));
-
             if (set.getOrDefault(hash, 0) == 1) {
                 result.add(s.substring(i - 9, i + 1));
             }

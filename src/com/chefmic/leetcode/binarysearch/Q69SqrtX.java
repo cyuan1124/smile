@@ -24,4 +24,41 @@ public class Q69SqrtX {
             }
         }
     }
+
+    public double squareRoot(double x) {
+        double left, right;
+        if (x < 1) {
+            left = x;
+            right = 1.0;
+        } else {
+            left = 1.0;
+            right = x;
+        }
+
+        while (compare(left, right) == Ordering.SMALLER) {
+            double mid = left + 0.5 * (right - left);
+            double midSquare = mid * mid;
+            if (compare(midSquare, x) == Ordering.EQUAL) {
+                return mid;
+            } else if (compare(midSquare, x) == Ordering.SMALLER) {
+                left = mid;
+            } else {
+                right = mid;
+            }
+        }
+
+        return left;
+    }
+
+    enum Ordering {
+        SMALLER, EQUAL, LAGER
+    }
+
+    private Ordering compare(double a, double b) {
+        final double EPSILON = 0.00001;
+        double diff = (a - b) / b;
+        return diff < -EPSILON ? Ordering.SMALLER :
+                (diff > EPSILON ? Ordering.LAGER : Ordering.EQUAL);
+    }
+
 }

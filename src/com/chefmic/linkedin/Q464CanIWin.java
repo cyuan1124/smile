@@ -15,7 +15,7 @@ public class Q464CanIWin {
         if (sum < desiredTotal) return false;
         if (desiredTotal <= 0) return true;
 
-        map = new HashMap();
+        map = new HashMap<>();
         used = new boolean[maxChoosableInteger + 1];
         return helper(desiredTotal);
     }

@@ -2,6 +2,9 @@ package com.chefmic.leetcode.list;
 
 import com.chefmic.leetcode.ds.ListNode;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 /**
  * Created by cyuan on 1/15/17.
  */
@@ -11,6 +14,8 @@ public class Q147InsertionSortList {
         ListNode head = ListNode.construct(6, 5, 3, 1, 8, 7, 2, 4);
         head = insertionSortList(head);
         ListNode.print(head);
+
+        Arrays.stream(args).sorted().collect(Collectors.toList());
     }
 
     public static ListNode insertionSortList(ListNode head) {

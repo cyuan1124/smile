@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 public class Basic {
 
     public static void main(String[] args) {
-        testStream();
+        String msg = "Úñ\u000E\u0004C\u0001\u00013UUU¡";
     }
 
     private static void testStream() {
